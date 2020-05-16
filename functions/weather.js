@@ -1,4 +1,4 @@
-const fetch = require("fetch");
+const fetch = require("node-fetch");
 
 exports.handler = async function(event, context, callback) {
   const ip = event.headers["client-ip"];
