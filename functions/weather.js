@@ -18,6 +18,6 @@ exports.handler = async function(event, context, callback) {
 
   callback(null, {
     statusCode: 200,
-    body: { raining, location, prettyLocation, current_forecast },
+    body: JSON.stringify({ raining, location, prettyLocation, current_forecast }),
   });
 };
