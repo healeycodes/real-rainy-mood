@@ -1,7 +1,7 @@
 [build]
 
-  publish = ".nuxt/dist/"
+  publish = "dist/"
 
-  command = "nuxt build"
+  command = "nuxt generate"
 
   functions = "functions/"
