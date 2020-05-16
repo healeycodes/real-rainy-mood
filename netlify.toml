@@ -1,0 +1,7 @@
+[build]
+
+  publish = "dist/"
+
+  command = "nuxt build"
+
+  functions = "functions/"

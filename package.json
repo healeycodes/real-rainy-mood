@@ -1,0 +1,13 @@
+{
+  "name": "real-rainy-mood",
+  "dependencies": {
+    "node-fetch": "^2.6.0",
+    "nuxt": "latest"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "post-update": "yarn upgrade --latest"
+  }
+}
