@@ -2,7 +2,9 @@ const fetch = require("node-fetch");
 const ip6addr = require("ip6addr");
 
 exports.handler = async function(event, context, callback) {
-  const ip = ip6addr.parse(event.headers["client-ip"]).toString({ format: "v4" });
+  const addr = ip6addr.parse(event.headers["client-ip"]).toString({ format: "v4" });
+  const ip = addr.toString({ format: addr.kind() === "ipv4" ? "v4" : "v6" });
+
   const location = await fetch(`http://ip-api.com/json/${ip}`).then((res) => res.json());
   const prettyLocation = `${location.zip}\n${location.city}\n${location.regionName}\n${location.Canada}`;
 
