@@ -1,6 +1,7 @@
 {
   "name": "real-rainy-mood",
   "dependencies": {
+    "ip6addr": "^0.2.3",
     "node-fetch": "^2.6.0",
     "nuxt": "latest"
   },
