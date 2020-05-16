@@ -6,7 +6,7 @@ exports.handler = async function(event, context, callback) {
   const prettyLocation = `${location.zip}\n${location.city}\n${location.regionName}\n${location.Canada}`;
 
   const current_forecast = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?lat=${location.lat}&lon=${location.lon}&appid${process.env.OPEN_WEATHER_MAP_API_KEY}`
+    `https://api.openweathermap.org/data/2.5/weather?lat=${location.lat}&lon=${location.lon}&appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`
   ).then((res) => res.json());
   const weatherId = current_forecast.weather[0].id;
 
