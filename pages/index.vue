@@ -42,7 +42,7 @@ export default {
   methods: {
     async fetchRaining() {
       const res = await this.$http.$get(
-        "https://real-rainy-mood.netlify.app/.netlify/functions/weather"
+        "/.netlify/functions/weather"
       );
       this.raining = res.raining;
       this.location = res.prettyLocation;
