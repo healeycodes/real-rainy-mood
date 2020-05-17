@@ -1,8 +1,10 @@
 {
   "name": "real-rainy-mood",
   "dependencies": {
+    "@nuxt/http": "^0.5.1",
     "node-fetch": "^2.6.0",
-    "nuxt": "latest"
+    "nuxt": "latest",
+    "sakura.css": "^1.2.0"
   },
   "scripts": {
     "dev": "nuxt",

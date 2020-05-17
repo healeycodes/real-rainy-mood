@@ -1,21 +1,22 @@
 <template>
   <div>
-    <p>Hi from {{ name }}</p>
-    <NLink to="/">
-      Home page
-    </NLink>
+    <NLink to="/">Home</NLink>
+    <h1>
+      <span role="img" aria-label="wave">👋</span> Hi,
+      <a href="https://healeycodes.com/">Andrew</a> here.
+    </h1>
+    <p>I wanted to learn more about Nuxt.js so I built this thing you're reading.</p>
+    <p>
+      Check out the
+      <a href="https://github.com/healeycodes/real-rainy-mood">source code</a>.
+    </p>
   </div>
 </template>
 
 <script>
 export default {
-  asyncData () {
-    return {
-      name: process.static ? 'static' : (process.server ? 'server' : 'client')
-    }
-  },
   head: {
-    title: 'About page'
+    title: "About page"
   }
-}
+};
 </script>
