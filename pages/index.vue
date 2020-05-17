@@ -30,7 +30,34 @@
 <script>
 export default {
   head: {
-    title: "Home page"
+    title: "Real Rainy Mood",
+    meta: [
+      {
+        hid: "og:title",
+        name: "og:title",
+        content: "Real Rainy Mood"
+      },
+      {
+        hid: "og:description",
+        name: "og:description",
+        content: "☔ If it's not raining, you're not allowed in."
+      },
+      {
+        hid: "og:image",
+        name: "og:image",
+        content: "https://real-rainy-mood.netlify.app/og-image.png"
+      },
+      {
+        hid: "og:url",
+        name: "og:url",
+        content: "https://real-rainy-mood.netlify.app"
+      },
+      {
+        hid: "twitter:card",
+        name: "twitter:card",
+        content: "summary_large_image"
+      }
+    ]
   },
   data() {
     return {
@@ -41,9 +68,7 @@ export default {
   },
   methods: {
     async fetchRaining() {
-      const res = await this.$http.$get(
-        "/.netlify/functions/weather"
-      );
+      const res = await this.$http.$get("/.netlify/functions/weather");
       this.raining = res.raining;
       this.location = res.prettyLocation;
       this.ready = true;
