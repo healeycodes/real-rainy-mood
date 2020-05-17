@@ -14,6 +14,11 @@ module.exports = {
         content: "☔ If it's not raining, you're not allowed in.",
       },
       {
+        hid: "og:title",
+        name: "og:title",
+        content: "Real Rainy Mood",
+      },
+      {
         hid: "og:image",
         name: "og:image",
         content: "https://real-rainy-mood.netlify.app/og-image.png",
@@ -27,6 +32,16 @@ module.exports = {
         hid: "og:url",
         name: "og:url",
         content: "https://real-rainy-mood.netlify.app",
+      },
+      {
+        hid: "twitter:title",
+        name: "twitter:title",
+        content: "Real Rainy Mood",
+      },
+      {
+        hid: "twitter:text:title",
+        name: "twitter:text:title",
+        content: "Real Rainy Mood",
       },
       {
         hid: "twitter:card",
