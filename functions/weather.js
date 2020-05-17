@@ -11,10 +11,7 @@ exports.handler = async function(event, context, callback) {
   const weatherId = current_forecast.weather[0].id;
 
   // Within the range of thunderstorm, drizzle, rain, or snow
-  let raining = false;
-  if (weatherId >= 200 && weatherId <= 622) {
-    raining = true;
-  }
+  let raining = weatherId >= 200 && weatherId <= 622;
 
   callback(null, {
     statusCode: 200,
