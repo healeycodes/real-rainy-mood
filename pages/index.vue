@@ -8,7 +8,7 @@
     <div v-if="!ready">
       <h2>Loading..</h2>
     </div>
-    <div v-if="ready && !raining">
+    <div v-if="ready && raining">
       <h2>It is raining in {{ location }}.</h2>
       <p>Enjoy some comfy music on me.</p>
       <iframe
@@ -20,7 +20,7 @@
         allowfullscreen
       ></iframe>
     </div>
-    <div v-if="ready && raining">
+    <div v-if="ready && !raining">
       <h2>It is not raining in {{ location }}.</h2>
       <p>So you can't come in.</p>
     </div>
