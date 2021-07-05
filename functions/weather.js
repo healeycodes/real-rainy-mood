@@ -1,14 +1,18 @@
 const fetch = require("node-fetch");
 
 exports.handler = async function(event, context, callback) {
-  const ip = event.headers["client-ip"];
+  const ip = event.headers["x-f-client-connection-ip"];
+  console.log(ip)
   const location = await fetch(`http://ip-api.com/json/${ip}`).then((res) => res.json());
+  console.log(location)
   const prettyLocation = `${location.zip}, ${location.city}, ${location.regionName}, ${location.country}`;
 
   const current_forecast = await fetch(
     `https://api.openweathermap.org/data/2.5/weather?lat=${location.lat}&lon=${location.lon}&appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`
   ).then((res) => res.json());
+  console.log(current_forecast)
   const weatherId = current_forecast.weather[0].id;
+  console.log(weatherId)
 
   // Within the range of thunderstorm, drizzle, rain, or snow
   let raining = weatherId >= 200 && weatherId <= 622;
