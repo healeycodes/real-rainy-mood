@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 
 exports.handler = async function(event, context, callback) {
-  const ip = event.headers["client-ip"];
+  const ip = event.headers["x-f-client-connection-ip"];
   const location = await fetch(`http://ip-api.com/json/${ip}`).then((res) => res.json());
   const prettyLocation = `${location.zip}, ${location.city}, ${location.regionName}, ${location.country}`;
 
