@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 
 exports.handler = async function(event, context, callback) {
-  const ip = event.headers["x-f-client-connection-ip"];
+  const ip = event.headers["x-nf-client-connection-ip"];
   console.log(ip)
   const location = await fetch(`http://ip-api.com/json/${ip}`).then((res) => res.json());
   console.log(location)
